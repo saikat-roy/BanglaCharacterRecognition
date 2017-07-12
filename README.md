@@ -1,5 +1,7 @@
 ## Bangla Character Recognition with Supervised Layerwise Training
 
+### Info: Involves old rebuilt code. Current functionality somewhat limited. In the process of being expanded.
+
 ### Dependencies
 
 The following major dependencies are necessary to run the code:
