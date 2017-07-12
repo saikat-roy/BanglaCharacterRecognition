@@ -54,7 +54,7 @@ def supervisedLayerwisePRL(trainset, testset):
 					  cost=SumOfCosts(costs = [
 					  Default(),
 					  WeightDecay(
-					    coeffs = [ 0.0005, 0.0005]
+					    coeffs = [ 0.0005, 0.0005, 0.0005]
 					   )
 					   ]),
 					  train_iteration_mode='shuffled_sequential',
@@ -106,7 +106,7 @@ def supervisedLayerwisePRL(trainset, testset):
 					  cost=SumOfCosts(costs = [
 					  Default(),
 					  WeightDecay(
-					    coeffs = [ 0.0005, 0.0005, 0.0005]
+					    coeffs = [ 0.0005, 0.0005, 0.0005, 0.0005]
 					   )
 					   ]),
 					  train_iteration_mode='shuffled_sequential',
@@ -158,7 +158,7 @@ def supervisedLayerwisePRL(trainset, testset):
 					  cost=SumOfCosts(costs = [
 					  Default(),
 					  WeightDecay(
-					    coeffs = [ 0.0005, 0.0005, 0.0005, 0.0005]
+					    coeffs = [ 0.0005, 0.0005, 0.0005, 0.0005, 0.0005]
 					   )
 					   ]),
 					  train_iteration_mode='shuffled_sequential',
@@ -171,8 +171,8 @@ def supervisedLayerwisePRL(trainset, testset):
 		save_path='./Saved Models/conv_supervised_layerwise_best3.pkl')
 
 	decay = sgd.LinearDecayOverEpoch(start=8,
-									 saturate=15,
-									 decay_factor=0.1)
+					 saturate=15,
+					 decay_factor=0.1)
 
 	experiment = Train(dataset=trn,
 					   model=mdl,
